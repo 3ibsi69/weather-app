@@ -31,18 +31,15 @@ const findMyState = () => {
     const apikey = "04ea0d4bb12c89740b0be1b440d90ec5";
     const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
     const searchSelect = document.querySelector(".search-select");
-    const first = document.getElementById("first");
   
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
       .then((data) => {
         findMyState()
           .then((country) => {
-            first.textContent = country;
             const option = document.createElement("option");
             option.textContent = country;
             searchSelect.appendChild(option);
-            // Trigger the weather data for the first country
             getWeatherData(country);
           })
           .catch((error) => {
