@@ -1,4 +1,3 @@
-const searchPic = document.querySelector('.search-pic');
 const cityname = document.querySelector('.city');
 const temp = document.querySelector('.temp');
 const weather = document.querySelector('.weather');
@@ -52,9 +51,10 @@ async function getWeatherData(city){
 
 document.querySelector('.all-info').style.display = "block";
 }
-searchPic.addEventListener('click', () => {
-const city = searchSelect.value;
-getWeatherData(city);
 
-}
-)
+
+
+searchSelect.addEventListener('change', (e) => {
+    getWeatherData(e.target.value);
+});
+

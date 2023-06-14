@@ -51,16 +51,6 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2509803922);
   margin-right: 20px;
 }
-.box .container .search-box .search-pic {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2509803922);
-  cursor: pointer;
-}
-.box .container .search-box .search-pic:hover {
-  transform: scale(1.02);
-}
 .box .container .weather-box {
   display: flex;
   justify-content: center;
