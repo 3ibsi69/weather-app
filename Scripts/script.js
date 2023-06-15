@@ -1,3 +1,4 @@
+//Find location from browser
 const findMyState = () => {
   return new Promise((resolve, reject) => {
     const success = (position) => {
@@ -20,6 +21,7 @@ const findMyState = () => {
     navigator.geolocation.getCurrentPosition(success, error);
   });
 };
+// END  Find location from browser
 
 window.addEventListener("DOMContentLoaded", async () => {
   const cityname = document.querySelector(".city");
